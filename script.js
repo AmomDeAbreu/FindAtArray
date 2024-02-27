@@ -15,5 +15,8 @@ btn.addEventListener("click", () => {
         return e.toLowerCase() === n1.toLowerCase();
     });
     
-    res.innerHTML = "Valor encontrado na posição " + index + "!";
+    if(index != -1)
+        res.innerHTML = "Value found at " + index + " position!";
+    else
+        res.innerHTML = "Value not found!"; 
 })
