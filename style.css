@@ -93,3 +93,12 @@ div[class*=box] {
     opacity: 1;
     transform: scale(1,1);
   }
+
+  #outside{
+    margin-left: 33%;
+  }
+
+  a{
+    text-decoration: none;
+    color: blanchedalmond;
+  }
