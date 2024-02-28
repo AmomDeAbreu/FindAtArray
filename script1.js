@@ -1,4 +1,4 @@
-const array1 = ["Amom", "Amom", "Amom", "Amom"];
+const array1 = [13, 21, 12, 11, 93, 27, 1];
 let input1 = document.querySelector(".in_txt");
 const btn = document.querySelector("#btn3");
 const res = document.querySelector("#resultado");
@@ -8,15 +8,15 @@ a1.innerText = "Array: [" + array1 + "]";
 
 
 btn.addEventListener("click", () => {
-    let n1 = input1.value.toString();
-    let index = array1.every((e) => {
-        e.toString();
+    let n1 = Number(input1.value);
+    let index = array1.every((e,i) => {
         console.log(typeof e, typeof n1);
-        return e.toLowerCase() === n1.toLowerCase();
+        if(e <= n1)
+            return true;
+        else
+            res.innerHTML = "Array doesn't meet the requirements at "+ i + " position."; 
     });
     
-    if(index != -1)
-        res.innerHTML = "Value found at " + index + " position!";
-    else
-        res.innerHTML = "Value not found!"; 
+    if(index)
+        res.innerHTML = "Array meets the requirements";
 })
